@@ -1,0 +1,10 @@
+Django==5.2.4
+djangorestframework
+djangorestframework-simplejwt
+django-cors-headers
+PyPDF2
+openpyxl
+reportlab
+Pillow
+gunicorn
+psycopg2-binary
