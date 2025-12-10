@@ -30,7 +30,8 @@ DEBUG = os.getenv("DJANGO_DEBUG", "False") == "True"
 ALLOWED_HOSTS = ["*"]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = '/opt/media'
+
 CORS_ALLOW_ALL_ORIGINS = True  # أو استخدم القائمة المحددة
 X_FRAME_OPTIONS = 'ALLOWALL'
 AUTH_USER_MODEL = 'core.CustomUser'
@@ -170,6 +171,7 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 
 
