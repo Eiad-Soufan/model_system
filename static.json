@@ -1,0 +1,4 @@
+{
+  "staticDir": "staticfiles",
+  "include": ["staticfiles"]
+}
