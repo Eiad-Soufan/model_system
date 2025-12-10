@@ -5,4 +5,10 @@ from whitenoise import WhiteNoise
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'model_system.settings')
 
 application = get_wsgi_application()
-application = WhiteNoise(application, root=os.path.join(os.path.dirname(__file__), '../staticfiles'))
+
+# المسار الصحيح الذي يستخدمه Render بعد collectstatic
+STATIC_ROOT = '/opt/render/project/src/staticfiles'
+
+# إضافة ملفات static
+application = WhiteNoise(application)
+application.add_files(STATIC_ROOT, prefix='static/')
